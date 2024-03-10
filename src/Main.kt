@@ -18,7 +18,7 @@ fun main() {
     val jumlahMatakuliah = inputJumlahMatakuliah?.toIntOrNull()
 
     if (jumlahMatakuliah == null || jumlahMatakuliah <= 0) {
-        println("Jumlah mata kuliah tidak valid")
+        println("Jumlah mata kuliah $jumlahMatakuliah atau tidak valid")
         return
     }
 
@@ -62,6 +62,7 @@ fun main() {
 
     val totalSKS = menghitungSKS(*sksMatakuliahArray.filterNotNull().toIntArray())
     val ips : Float = totalIP / totalSKS
+    println("Jumlah SKS mata kuliah yang Anda ambil: $totalSKS")
     println("Indeks Prestasi Semester (IPS) Anda: $ips")
 }
 
